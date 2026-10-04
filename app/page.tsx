@@ -22,7 +22,7 @@ const questions = [
   ["Podemos levar acompanhantes?", "Considerem as pessoas indicadas no vosso convite. Se tiverem alguma dúvida sobre acompanhantes, falem connosco antes de confirmar."],
   ["E as restrições alimentares e alergias?", "Escrevam no RSVP quem tem cada restrição ou alergia e qual é. Partilharemos essa informação com a equipa da quinta para preparar a refeição."],
   ["A que horas acaba a festa?", "O fim está previsto para as 03h do dia 27 de junho."],
-  ["Há estacionamento?", "Sim, há estacionamento próprio e gratuito à entrada da Herdade da Emberiza. Se tiverem lugares disponíveis no carro, indiquem no RSVP para ajudar a organizar boleias."],
+  ["Há estacionamento?", "Sim, há estacionamento próprio e gratuito à entrada da Herdade da Emberiza."],
 ];
 
 function Countdown() {
@@ -67,7 +67,7 @@ function RSVP() {
         <label htmlFor="total">Número total de pessoas *</label><input id="total" name="total" type="number" min="1" max="30" defaultValue="1" required /><p className="field-hint">Conta-te a ti, aos acompanhantes e às crianças.</p>
         <label htmlFor="companions">Nomes dos acompanhantes</label><textarea id="companions" name="companions" rows={2} maxLength={1500} placeholder="Nome completo de cada acompanhante" />
         <label htmlFor="children">Crianças: nome e idade</label><textarea id="children" name="children" rows={2} maxLength={1500} placeholder="Por exemplo: Maria, 5 anos; João, 2 anos" />
-        <label htmlFor="rides">Boleias</label><textarea id="rides" name="rides" rows={2} maxLength={1000} placeholder="Tens lugares livres ou precisas de boleia? Diz-nos de onde vais sair." />
+
         <label htmlFor="message">Mensagem para os noivos</label><textarea id="message" name="message" rows={3} maxLength={2000} placeholder="Deixa-nos umas palavras, se te apetecer…" />
       </div>}
       {attendance !== "no" && <fieldset className="dietary-fields"><legend>Alimentação</legend><label htmlFor="dietary">Há intolerâncias, alergias ou preferências alimentares no teu convite?</label><p id="dietary-hint" className="field-hint">Indica o nome de cada pessoa e o que devemos ter em conta: intolerâncias, alergias, alimentação vegan, vegetariana ou outras necessidades.</p><textarea id="dietary" name="dietary" rows={4} maxLength={2000} aria-describedby="dietary-hint" placeholder="Por exemplo: Ana — vegetariana; Pedro — intolerância à lactose; Maria — alergia a frutos secos. Se não houver, escreve “Nenhuma”." /></fieldset>}
