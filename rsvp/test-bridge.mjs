@@ -1,0 +1,27 @@
+import vm from 'node:vm';
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {webcrypto} from 'node:crypto';
+let receive,submitted,nativeCalls=0,timer;
+const elements=[];
+function element(tag){const e={tag,children:[],appendChild(v){this.children.push(v)},setAttribute(){},remove(){this.removed=true}};elements.push(e);return e;}
+const window={WEDDING_RSVP_ENDPOINT:'https://script.google.com/macros/s/testdeployment/exec',fetch:()=>{nativeCalls++;return Promise.resolve('native')},addEventListener:(type,f)=>{receive=f},removeEventListener(){}};
+const document={createElement:element,head:{appendChild(){}},documentElement:{classList:{add(){}}},body:{append(){}}};
+const context=vm.createContext({window,document,crypto:webcrypto,Uint8Array,Array,Object,JSON,URL,Response,Promise,Error,HTMLFormElement:{prototype:{submit(){submitted=this}}},setTimeout:f=>{timer=f;return 1},clearTimeout(){}});
+vm.runInContext(fs.readFileSync(new URL('./rsvp-bridge.js',import.meta.url),'utf8'),context);
+assert.equal(await window.fetch('/other'),'native');assert.equal(nativeCalls,1);
+const request=window.fetch('/api/rsvp',{method:'POST',body:JSON.stringify({fullName:'Teste',attending:true})});
+const nonce=submitted.children.find(x=>x.name==='nonce').value;
+receive({origin:'https://evil.example',data:{type:'marta-pedro-rsvp',nonce,saved:true}});
+assert(!submitted.removed);
+receive({origin:'https://n-example-script.googleusercontent.com',data:{type:'marta-pedro-rsvp',nonce:'wrong',saved:true}});
+assert(!submitted.removed);
+receive({origin:'https://n-example-script.googleusercontent.com',data:{type:'marta-pedro-rsvp',nonce,saved:true,total:1,updated:false}});
+const response=await request;assert.equal(response.status,200);assert.equal((await response.json()).saved,true);assert(submitted.removed);
+const failure=window.fetch('/api/rsvp',{method:'POST',body:'{}'});
+const nonce2=submitted.children.find(x=>x.name==='nonce').value;
+receive({origin:'https://script.googleusercontent.com',data:{type:'marta-pedro-rsvp',nonce:nonce2,saved:false,error:'Falha'}});
+assert.equal((await failure).status,400);
+const timeout=window.fetch('/api/rsvp',{method:'POST',body:'{}'});timer();
+await assert.rejects(timeout,/confirmar a gravação/);
+console.log('Passed: same form transport, verified receipt, rejected spoofed/wrong-nonce messages, server failure, timeout.');
