@@ -9,6 +9,7 @@ Site Casamento/
 ├── js/config.js        ← ⭐ TODOS os textos, horários e links. É só aqui que mexes.
 ├── js/main.js          ← lógica (não precisas de tocar)
 ├── assets/img/         ← ilustrações florais tiradas do PPT
+├── assets/herdade/     ← fotografias da Herdade da Emberiza
 ├── assets/fotos/       ← (vazio) para as vossas fotografias
 └── .nojekyll           ← necessário para o GitHub Pages
 ```
@@ -151,3 +152,43 @@ Tudo retirado de `Casamento Marta e Pedro_v2.pptx`:
 - **Músicas da cerimónia:** o alinhamento do slide 9
 
 > Nota: as fotografias de inspiração do PPT (mesas, buquês, espelhos) **não** foram usadas no site — são imagens de casamentos de outras pessoas, retiradas do Pinterest. Não devem ir para um site público.
+
+---
+
+## As fotografias da herdade
+
+As 8 fotos em `assets/herdade/` vêm do **site oficial da quinta**, [herdadedaemberiza.pt](https://herdadedaemberiza.pt). Onde estão usadas:
+
+| Ficheiro | Onde aparece |
+|---|---|
+| `altar-vista.webp` | fundo do hero + imagem de partilha no WhatsApp |
+| `festa-piscina.webp` | secção "O local" |
+| `chapeus-oliveira.webp` | fim da secção "O dia" |
+| `aliancas-piano.webp` | fim da secção "Música" |
+| `mesa-posta.webp`, `picadeiro.webp`, `buque-piano.webp`, `livro-memorias.webp` | galeria |
+
+**Escolhi só fotos sem noivos ou convidados reconhecíveis.** O site da quinta tem várias imagens bonitas de casamentos anteriores, mas pôr a cara de outro casal no vosso site confunde os convidados — e são pessoas que não deram autorização para isso. As que ficaram mostram o espaço, não quem lá esteve.
+
+> **Antes de divulgar o link:** manda uma mensagem à quinta (+351 968 153 737) a dizer que usaste 8 fotos do site deles no vosso site de casamento. É quase certo que dizem que sim — gostam da divulgação — mas as fotos são de fotógrafos contratados por eles e vale a pena ter o ok por escrito. Aproveita e pede o *photo kit*: podem ter versões em alta resolução.
+
+Quando tiverem fotos vossas, é só pô-las em `assets/fotos/` e acrescentar linhas à lista `galeria` no `config.js`:
+
+```js
+{ src: "assets/fotos/nos-os-dois.jpg", alt: "Nós os dois em Alenquer" },
+```
+
+Põe `destaque: true` para a foto ocupar o dobro da largura na grelha.
+
+---
+
+## Sobre a herdade (no site, secção "O local")
+
+Informação recolhida do site oficial, para os convidados saberem onde vão:
+
+- 25 hectares na **Paisagem Protegida da Serra de Montejunto**, Alenquer
+- Na mesma família (Costa) **desde 1881**; casa principal de **1932**, recuperada
+- **38 km de Lisboa** (~40 min pela A1, saída Carregado)
+- Salão envidraçado com vista panorâmica de 360º sobre o Tejo e a lezíria
+- Jardim, piscina, e picadeiro — a herdade cria cavalos lusitanos puro-sangue (*Emberiza Horses*)
+- **Um casamento por dia** — a quinta é só vossa
+- Morada: Estrada da Quinta do Barreiro n.º 11, 2580-377 Alenquer

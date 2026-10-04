@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Marta &amp; Pedro · 26.06.2027">
 <meta property="og:description" content="Herdade da Emberiza, Alenquer. Vem celebrar connosco — confirma a tua presença.">
-<meta property="og:image" content="assets/img/floral-dourado-flores.png">
+<meta property="og:image" content="assets/herdade/altar-vista.webp">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌻</text></svg>">
 
@@ -37,6 +37,7 @@
       <a href="#historia">A nossa história</a>
       <a href="#dia">O dia</a>
       <a href="#local">O local</a>
+      <a href="#galeria">Galeria</a>
       <a href="#traje">Traje</a>
       <a href="#musica">Música</a>
       <a href="#faq">Dúvidas</a>
@@ -48,6 +49,11 @@
 
 <!-- ══════════════ HERO ══════════════ -->
 <section class="hero" id="inicio">
+  <!-- fotografia do altar da Herdade da Emberiza, com a vista sobre a lezíria -->
+  <div class="hero__bg" aria-hidden="true">
+    <img src="assets/herdade/altar-vista.webp" alt="" fetchpriority="high" decoding="async">
+  </div>
+
   <img src="assets/img/folhas-azul.png" alt="" class="hero__leaf hero__leaf--l" aria-hidden="true">
   <img src="assets/img/folhas-dourado.png" alt="" class="hero__leaf hero__leaf--r" aria-hidden="true">
 
@@ -113,6 +119,12 @@
     </p>
 
     <ol class="timeline" id="timeline"></ol>
+
+    <figure class="faixa reveal">
+      <img src="assets/herdade/chapeus-oliveira.webp" loading="lazy" decoding="async"
+           alt="Chapéus de palha pendurados numa oliveira do jardim da herdade">
+      <figcaption>Junho em Alenquer bate forte. A herdade tem sombra — e chapéus.</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -125,9 +137,26 @@
     <div class="sec__head">
       <p class="sec__kicker">Onde</p>
       <h2 class="sec__title" data-local>Herdade da Emberiza</h2>
-      <p class="sec__lead"><span data-localidade>Alenquer</span> &middot; a 45 minutos de Lisboa</p>
+      <p class="sec__lead"><span data-localidade>Alenquer</span> &middot; Paisagem Protegida da Serra de Montejunto</p>
     </div>
 
+    <!-- apresentação da herdade -->
+    <div class="herdade">
+      <figure class="herdade__foto reveal">
+        <img src="assets/herdade/festa-piscina.webp" loading="lazy" decoding="async"
+             alt="Jardim da Herdade da Emberiza ao anoitecer, com luzes de festão e vista sobre a lezíria">
+      </figure>
+
+      <div class="herdade__texto reveal">
+        <p class="herdade__intro" data-herdade-intro></p>
+        <ul class="factos" id="factos"></ul>
+      </div>
+    </div>
+
+    <!-- os espaços -->
+    <ul class="espacos" id="espacos"></ul>
+
+    <!-- mapa + como chegar -->
     <div class="local">
       <div class="local__map">
         <iframe
@@ -143,6 +172,20 @@
         <a class="btn btn--line" id="btnMapa" target="_blank" rel="noopener">Abrir no Google Maps</a>
       </div>
     </div>
+  </div>
+</section>
+
+
+<!-- ══════════════ GALERIA ══════════════ -->
+<section class="sec sec--dark" id="galeria">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="sec__kicker">Um aperitivo</p>
+      <h2 class="sec__title">A herdade</h2>
+      <p class="sec__lead">Para quem ainda não lá foi. Dia 26 de Junho vemos isto ao vivo.</p>
+    </div>
+
+    <ul class="galeria" id="galeria"></ul>
   </div>
 </section>
 
@@ -174,6 +217,12 @@
     <p class="sec__lead">Cada momento tem a sua. Se tiverem uma que não possa faltar na pista, digam-nos no RSVP.</p>
 
     <ul class="musicas" id="musicas"></ul>
+
+    <figure class="faixa reveal">
+      <img src="assets/herdade/aliancas-piano.webp" loading="lazy" decoding="async"
+           alt="Duas alianças pousadas nas teclas do piano antigo da Herdade da Emberiza">
+      <figcaption>O piano da herdade.</figcaption>
+    </figure>
   </div>
 </section>
 
