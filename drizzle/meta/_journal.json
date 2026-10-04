@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1791140338773,
+      "tag": "0000_gray_the_leader",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1791147466344,
+      "tag": "0001_round_praxagora",
+      "breakpoints": true
+    }
+  ]
+}

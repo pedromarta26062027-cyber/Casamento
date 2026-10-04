@@ -1,0 +1,1 @@
+ALTER TABLE `rsvps` ADD `comments` text DEFAULT '' NOT NULL;
