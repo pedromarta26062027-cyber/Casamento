@@ -1,0 +1,6 @@
+﻿# Ignorar ao publicar no GitHub
+*.pptx
+~$*
+Thumbs.db
+.DS_Store
+Timeline.png

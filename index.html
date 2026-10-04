@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marta &amp; Pedro · 26 de Junho de 2027</title>
+<meta name="description" content="Marta e Pedro casam-se a 26 de Junho de 2027 na Herdade da Emberiza, em Alenquer. Confirma a tua presença.">
+<meta name="theme-color" content="#FBF7EF">
+
+<!-- Partilha no WhatsApp / redes sociais -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Marta &amp; Pedro · 26.06.2027">
+<meta property="og:description" content="Herdade da Emberiza, Alenquer. Vem celebrar connosco — confirma a tua presença.">
+<meta property="og:image" content="assets/img/floral-dourado-flores.png">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌻</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Italiana&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ══════════════ NAVEGAÇÃO ══════════════ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#inicio" class="nav__brand">M <span>&amp;</span> P</a>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav__menu" id="navMenu">
+      <a href="#historia">A nossa história</a>
+      <a href="#dia">O dia</a>
+      <a href="#local">O local</a>
+      <a href="#traje">Traje</a>
+      <a href="#musica">Música</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="#rsvp" class="nav__cta">Confirmar presença</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero" id="inicio">
+  <img src="assets/img/folhas-azul.png" alt="" class="hero__leaf hero__leaf--l" aria-hidden="true">
+  <img src="assets/img/folhas-dourado.png" alt="" class="hero__leaf hero__leaf--r" aria-hidden="true">
+
+  <div class="hero__inner">
+    <p class="hero__eyebrow">Once upon a time&hellip;</p>
+
+    <h1 class="hero__names">
+      <span class="hero__name" data-noiva>Marta</span>
+      <span class="hero__amp">&amp;</span>
+      <span class="hero__name" data-noivo>Pedro</span>
+    </h1>
+
+    <div class="hero__rule" aria-hidden="true">
+      <span></span><svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 3c1.2 2.6 3.2 4.1 6 4.6-2.8.5-4.8 2-6 4.6-1.2-2.6-3.2-4.1-6-4.6 2.8-.5 4.8-2 6-4.6z" fill="currentColor"/><circle cx="12" cy="17.5" r="1.4" fill="currentColor"/></svg><span></span>
+    </div>
+
+    <p class="hero__meta">
+      <span data-data-texto>26 de Junho de 2027</span>
+      <em>&middot;</em>
+      <span data-local>Herdade da Emberiza</span>, <span data-localidade>Alenquer</span>
+    </p>
+
+    <!-- contagem decrescente -->
+    <div class="count" id="countdown" aria-label="Contagem decrescente para o casamento">
+      <div class="count__unit"><b data-c="d">—</b><small>dias</small></div>
+      <div class="count__unit"><b data-c="h">—</b><small>horas</small></div>
+      <div class="count__unit"><b data-c="m">—</b><small>minutos</small></div>
+      <div class="count__unit"><b data-c="s">—</b><small>segundos</small></div>
+    </div>
+
+    <a href="#rsvp" class="btn btn--solid hero__btn">Confirmar presença</a>
+  </div>
+
+  <a href="#historia" class="hero__scroll" aria-label="Continuar">
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M6 9l6 6 6-6"/></svg>
+  </a>
+</section>
+
+
+<!-- ══════════════ A NOSSA HISTÓRIA ══════════════ -->
+<section class="sec sec--cream" id="historia">
+  <img src="assets/img/floral-azul-magnolia.png" alt="" class="deco deco--tr" aria-hidden="true">
+
+  <div class="wrap wrap--narrow">
+    <p class="sec__kicker">Capítulo um</p>
+    <h2 class="sec__title">A nossa história</h2>
+    <p class="sec__lead" data-historia-intro></p>
+
+    <ol class="story" id="story"></ol>
+  </div>
+</section>
+
+
+<!-- ══════════════ O DIA ══════════════ -->
+<section class="sec sec--sage" id="dia">
+  <div class="wrap wrap--narrow">
+    <p class="sec__kicker">26 de Junho</p>
+    <h2 class="sec__title">O dia</h2>
+    <p class="sec__lead">O alinhamento, hora a hora, para ninguém chegar atrasado ao melhor bocado.</p>
+
+    <p class="aviso" id="avisoPrograma" hidden>
+      <strong>Horários ainda a confirmar.</strong> Estamos a fechar o alinhamento com a quinta — pode haver pequenos acertos. Atualizamos aqui assim que estiver fechado.
+    </p>
+
+    <ol class="timeline" id="timeline"></ol>
+  </div>
+</section>
+
+
+<!-- ══════════════ O LOCAL ══════════════ -->
+<section class="sec sec--cream" id="local">
+  <img src="assets/img/floral-dourado-lirio.png" alt="" class="deco deco--bl" aria-hidden="true">
+
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="sec__kicker">Onde</p>
+      <h2 class="sec__title" data-local>Herdade da Emberiza</h2>
+      <p class="sec__lead"><span data-localidade>Alenquer</span> &middot; a 45 minutos de Lisboa</p>
+    </div>
+
+    <div class="local">
+      <div class="local__map">
+        <iframe
+          title="Mapa da Herdade da Emberiza, Alenquer"
+          id="mapa"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+
+      <div class="local__info">
+        <ul class="cards" id="comoChegar"></ul>
+        <a class="btn btn--line" id="btnMapa" target="_blank" rel="noopener">Abrir no Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════ TRAJE / PALETA ══════════════ -->
+<section class="sec sec--blue" id="traje">
+  <div class="wrap wrap--narrow">
+    <p class="sec__kicker">O que vestir</p>
+    <h2 class="sec__title" data-traje-titulo>Traje de cerimónia</h2>
+    <p class="sec__lead" data-traje-texto></p>
+
+    <ul class="dicas" id="dicas"></ul>
+
+    <div class="paleta-bloco">
+      <p class="paleta-bloco__label">A nossa paleta</p>
+      <ul class="paleta" id="paleta"></ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════ MÚSICA ══════════════ -->
+<section class="sec sec--cream" id="musica">
+  <img src="assets/img/floral-dourado-flores.png" alt="" class="deco deco--tl" aria-hidden="true">
+
+  <div class="wrap wrap--narrow">
+    <p class="sec__kicker">Banda sonora</p>
+    <h2 class="sec__title">A música da cerimónia</h2>
+    <p class="sec__lead">Cada momento tem a sua. Se tiverem uma que não possa faltar na pista, digam-nos no RSVP.</p>
+
+    <ul class="musicas" id="musicas"></ul>
+  </div>
+</section>
+
+
+<!-- ══════════════ RSVP ══════════════ -->
+<section class="sec sec--sun" id="rsvp">
+  <div class="wrap wrap--narrow">
+    <p class="sec__kicker">Faz-nos o favor</p>
+    <h2 class="sec__title">Confirmar presença</h2>
+    <p class="sec__lead">
+      Respondam até <strong data-prazo>30 de Abril de 2027</strong>. Uma resposta por convite —
+      se forem mais do que um, há espaço para indicar toda a gente.
+    </p>
+
+    <div class="rsvp" id="rsvpBox">
+      <!-- preenchido por js/main.js -->
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════ FAQ ══════════════ -->
+<section class="sec sec--cream" id="faq">
+  <div class="wrap wrap--narrow">
+    <p class="sec__kicker">Antes que perguntem</p>
+    <h2 class="sec__title">Dúvidas</h2>
+
+    <div class="faq" id="faqList"></div>
+  </div>
+</section>
+
+
+<!-- ══════════════ RODAPÉ ══════════════ -->
+<footer class="foot">
+  <div class="wrap wrap--narrow">
+    <p class="foot__quote">&hellip;and they lived happily ever after</p>
+
+    <div class="foot__rule" aria-hidden="true"></div>
+
+    <p class="foot__names"><span data-noiva>Marta</span> &amp; <span data-noivo>Pedro</span></p>
+    <p class="foot__date"><span data-data-curta>26.06.2027</span> &middot; <span data-local>Herdade da Emberiza</span></p>
+
+    <ul class="foot__contactos" id="contactos"></ul>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
