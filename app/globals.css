@@ -191,3 +191,47 @@ footer{background:#f1eee4}.closing-art{position:relative;width:min(420px,100%);a
 .dietary-fields label{display:block;font-size:1.0625rem;line-height:1.5;margin-bottom:8px}
 .dietary-fields .field-hint{line-height:1.6;margin:0 0 14px}
 @media(max-width:760px){.monogram-brand{flex-basis:72px;width:72px;height:48px}.monogram-brand img{width:100.8px;left:-13.6px;top:-28.8px}.dietary-fields{padding:15px}}
+
+
+/* Ajustes de legibilidade e rodapé — 05/10/2026 */
+.event-facts{
+  gap:12px;
+  border-top:0;
+  border-bottom:0;
+  padding:0;
+}
+.event-facts>div{
+  background:rgba(248,245,237,.76);
+  backdrop-filter:blur(5px);
+  -webkit-backdrop-filter:blur(5px);
+  border:1px solid rgba(179,189,173,.68);
+  border-radius:12px;
+  padding:18px 16px;
+}
+.event-facts>div:last-child{
+  border:1px solid rgba(179,189,173,.68);
+}
+.footer-mark{
+  flex-direction:column;
+  gap:9px;
+}
+.footer-signoff{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+}
+.footer-credit{
+  display:block;
+  max-width:780px;
+  line-height:1.55;
+}
+@media(max-width:760px){
+  .event-facts{display:flex;flex-direction:column;gap:9px;max-width:350px}
+  .event-facts>div{
+    border:1px solid rgba(179,189,173,.68)!important;
+    padding:13px 14px 13px 52px;
+  }
+  .event-facts svg{left:14px;top:50%;transform:translateY(-50%)}
+  .footer-credit{max-width:420px}
+}
