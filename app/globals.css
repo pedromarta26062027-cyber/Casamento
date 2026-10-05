@@ -201,7 +201,7 @@ footer{background:#f1eee4}.closing-art{position:relative;width:min(420px,100%);a
   padding:0;
 }
 .event-facts>div{
-  background:rgba(248,245,237,.76);
+  background:rgba(255,252,245,.94);
   backdrop-filter:blur(5px);
   -webkit-backdrop-filter:blur(5px);
   border:1px solid rgba(179,189,173,.68);
